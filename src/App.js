@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Routes } from 'react-router-dom/cjs/react-router-dom.min';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom/cjs/react-router-dom.min';
 import { Header } from './components/Header';
 import { Watchlist } from './components/Watchlist';
 import { Watched } from './components/Watched';
@@ -9,7 +9,25 @@ import './App.css';
 import './lib/font-awesome/css/all.min.css';
 
 function App() {
-  return <i class="fas fa-comment"></i>
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+            <Watchlist />
+        </Route>
+
+        <Route path="/watched">
+            <Watched />
+        </Route>
+
+        <Route path="/add">
+          <Add />
+        </Route>
+        
+      </Switch>
+    </Router>
+  )
 }
 
 export default App;
