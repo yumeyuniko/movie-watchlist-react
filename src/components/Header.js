@@ -15,11 +15,11 @@ export const Header = () => {
             </li>
 
             <li>
-              <Link to="/">Watched</Link>
+              <Link to="/watched">Watched</Link>
             </li>
 
             <li>
-              <Link to="/" className='btn'>
+              <Link to="/add" className='btn btn-main'>
                 + Add
               </Link>
             </li>
