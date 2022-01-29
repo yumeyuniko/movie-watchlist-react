@@ -17,7 +17,13 @@ export const ResultCard = ({movie}) => {
       <div className="info">
         <div className="header">
           <h3 className="title">{movie.title}</h3>
-          <h4 className="release-date">{movie.release_date.substring(0,4)}</h4>
+          <h4 className="release-date">
+            {movie.release_date ? movie.release_date.substring(0, 4) : '-' }
+          </h4>
+        </div>
+
+        <div className="control">
+          <div className="btn">👀に追加する</div>
         </div>
       </div>
     </div>
